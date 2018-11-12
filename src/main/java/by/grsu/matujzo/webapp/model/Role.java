@@ -1,4 +1,4 @@
-package net.proselyte.springsecurityapp.model;
+package by.grsu.matujzo.webapp.model;
 
 
 import javax.persistence.*;

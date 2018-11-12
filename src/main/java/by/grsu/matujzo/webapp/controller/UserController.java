@@ -1,10 +1,11 @@
-package net.proselyte.springsecurityapp.controller;
+package by.grsu.matujzo.webapp.controller;
 
-import net.proselyte.springsecurityapp.model.User;
-import net.proselyte.springsecurityapp.service.SecurityService;
-import net.proselyte.springsecurityapp.service.UserService;
-import net.proselyte.springsecurityapp.validator.UserValidator;
+import by.grsu.matujzo.webapp.model.User;
+import by.grsu.matujzo.webapp.service.SecurityService;
+import by.grsu.matujzo.webapp.service.UserService;
+import by.grsu.matujzo.webapp.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -12,12 +13,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-/**
- * Controller for {@link net.proselyte.springsecurityapp.model.User}'s pages.
- *
- * @author Eugene Suleimanov
- * @version 1.0
- */
 
 @Controller
 public class UserController {
@@ -68,11 +63,11 @@ public class UserController {
 
     @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
     public String welcome(Model model) {
+        User user= (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        model.addAttribute("email",user.getEmail());
+        model.addAttribute("name", user.getFirstName());
+        model.addAttribute("lastname",user.getLastName());
         return "welcome";
     }
 
-    @RequestMapping(value = "/admin", method = RequestMethod.GET)
-    public String admin(Model model) {
-        return "admin";
-    }
 }

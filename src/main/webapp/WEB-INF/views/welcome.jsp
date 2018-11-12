@@ -9,12 +9,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
     <title>Welcome</title>
 
     <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="${contextPath}/resources/css/common.css">
 </head>
 <body>
 
@@ -25,8 +24,15 @@
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form>
 
-        <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a>
+        <h2>Welcome ${name} ${lastname} | <a onclick="document.forms['logoutForm'].submit()">Logout</a>
         </h2>
+        <div>
+           <H3 class="label">Your email: ${email}</H3>
+        </div>
+
+        <div>
+            <a href="/admin">Admin's page</a>
+        </div>
 
     </c:if>
 

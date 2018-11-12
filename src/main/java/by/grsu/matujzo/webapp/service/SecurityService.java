@@ -1,4 +1,4 @@
-package net.proselyte.springsecurityapp.service;
+package by.grsu.matujzo.webapp.service;
 
 /**
  * Service for Security.

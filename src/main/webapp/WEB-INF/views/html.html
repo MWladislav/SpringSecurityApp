@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../../resources/css/index.css">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="myNav">
+  <a class="navbar-brand" href="#"><i class="fas fa-book-open"></i> L<i class="fas fa-info-circle"></i>brary</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" style="margin-right:10px" type="submit">Search</button>
+    </form>
+    <form class="form-inline my-2">
+        <button type="submit" class="btn" style="margin-right:10px">Log In</button>
+    </form>
+    <form class="form-inline my-2">
+      <button type="submit" class="btn btn-success">Sign In</button>
+    </form>
+  </div>
+</nav>
+  <!--picture with info -->
+  <div id="headerwrap">
+    <div class="container">
+      <div class="row centered">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h1>My Library</h1>
+          <h2>On this resource you can find many interesting and amazing books</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!--Card container-->
+    <div class="container">
+      <h1>Find your book by genre</h1>
+      <div class="card-columns">
+        <div class="card">
+          <a href="#">
+            <img src="../../resources/imgs/adv.png" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Adventure books</h4>
+                <!--<p class="card-body"></p>-->
+                <button type="button" class="btn" id="brown">Go to adventure books!</button>
+              </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="#">
+            <img src="../../resources/imgs/detective.png" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Detective books</h4>
+                <button type="button" class="btn" id="skyBlue">Go to detective books!</button>
+              </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="#">
+            <img src="../../resources/imgs/fairyTale.png" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Fairy Tales</h4>
+                <button type="button" class="btn" id="violet">Go to fairy tales!</button>
+              </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="#">
+            <img src="../../resources/imgs/romance.png" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Romances</h4>
+                <button type="button" class="btn" id="pink">Go to romances!</button>
+              </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="#">
+            <img src="../../resources/imgs/horror.png" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Horror books</h4>
+                <button type="button" class="btn" id="red">Go to horror books!</button>
+              </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="#">
+            <img src="../../resources/imgs/scnFic.png" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Science Fiction</h4>
+                <button type="button" class="btn" id="blue">Go to science fiction!</button>
+              </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="#">
+            <img src="../../resources/imgs/scnFic.png" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Science Fiction</h4>
+                <button type="button" class="btn " id="blue">Go to science fiction!</button>
+              </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+  </body>
+</html>

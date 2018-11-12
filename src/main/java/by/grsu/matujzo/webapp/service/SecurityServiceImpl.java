@@ -1,4 +1,4 @@
-package net.proselyte.springsecurityapp.service;
+package by.grsu.matujzo.webapp.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,13 +9,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
-
-/**
- * Implementation of {@link SecurityService} interface.
- *
- * @author Eugene Suleimanov
- * @version 1.0
- */
 
 @Service
 public class SecurityServiceImpl implements SecurityService {

@@ -1,22 +1,17 @@
-package net.proselyte.springsecurityapp.service;
+package by.grsu.matujzo.webapp.service;
 
-import net.proselyte.springsecurityapp.dao.RoleDao;
-import net.proselyte.springsecurityapp.dao.UserDao;
-import net.proselyte.springsecurityapp.model.Role;
-import net.proselyte.springsecurityapp.model.User;
+import by.grsu.matujzo.webapp.dao.RoleDao;
+import by.grsu.matujzo.webapp.dao.UserDao;
+import by.grsu.matujzo.webapp.model.Role;
+import by.grsu.matujzo.webapp.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
-/**
- * Implementation of {@link UserService} interface.
- *
- * @author Eugene Suleimanov
- * @version 1.0
- */
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -32,13 +27,28 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void save(User user) {
-        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        //user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         Set<Role> roles = new HashSet<>();
         roles.add(roleDao.getOne(1L));
         user.setRoles(roles);
         userDao.save(user);
     }
 
+    @Override
+    public List<User> findAll(){ return userDao.findAll(); }
+
+    @Override
+    public void delete(Long id){
+        userDao.delete(id);
+    }
+
+    @Override
+    public User findById(Long id){ return userDao.getOne(id); }
+
+    @Override
+    public void update(User user){
+        userDao.saveAndFlush(user);
+    }
     @Override
     public User findByUsername(String username) {
         return userDao.findByUsername(username);
